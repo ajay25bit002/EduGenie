@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EduGenie - AI Learning Assistant</title>
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <div class="logo">
+      🎓 EduGenie
+    </div>
+
+    <p>Google Gemini Powered Learning Assistant</p>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main class="container">
+
+    <section class="hero">
+
+      <h1>
+        Learn Smarter with
+        <span>EduGenie</span>
+      </h1>
+
+      <p>
+        Your AI-powered learning assistant for
+        explanations, quizzes, summaries and personalized learning.
+      </p>
+
+    </section>
+
+
+    <!-- FEATURE NAVIGATION -->
+
+    <div class="tabs">
+
+      <button class="tab active" onclick="showSection('askSection')">
+        💬 Ask AI
+      </button>
+
+      <button class="tab" onclick="showSection('explainSection')">
+        📚 Explain
+      </button>
+
+      <button class="tab" onclick="showSection('quizSection')">
+        🧠 Quiz
+      </button>
+
+      <button class="tab" onclick="showSection('summarySection')">
+        📝 Summarize
+      </button>
+
+      <button class="tab" onclick="showSection('pathSection')">
+        🚀 Learning Path
+      </button>
+
+    </div>
+
+
+    <!-- ASK AI -->
+
+    <section id="askSection" class="card feature-section active-section">
+
+      <h2>💬 Ask EduGenie</h2>
+
+      <p>
+        Ask any educational question.
+      </p>
+
+      <textarea id="question" placeholder="Example: Explain the Pythagoras theorem..."></textarea>
+
+      <button class="primary-btn" onclick="askAI()">
+        Ask AI
+      </button>
+
+      <div id="askResult" class="result"></div>
+
+    </section>
+
+
+    <!-- EXPLAIN -->
+
+    <section id="explainSection" class="card feature-section">
+
+      <h2>📚 Explain a Topic</h2>
+
+      <input id="explainTopic" type="text" placeholder="Example: Operating System">
+
+      <select id="explainLevel">
+
+        <option value="beginner">
+          Beginner
+        </option>
+
+        <option value="intermediate">
+          Intermediate
+        </option>
+
+        <option value="advanced">
+          Advanced
+        </option>
+
+      </select>
+
+      <button class="primary-btn" onclick="explainTopic()">
+        Explain
+      </button>
+
+      <div id="explainResult" class="result"></div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section id="quizSection" class="card feature-section">
+
+      <h2>🧠 Generate Quiz</h2>
+
+      <input id="quizTopic" type="text" placeholder="Example: SQL">
+
+      <div class="row">
+
+        <select id="quizDifficulty">
+
+          <option value="easy">
+            Easy
+          </option>
+
+          <option value="medium" selected>
+            Medium
+          </option>
+
+          <option value="hard">
+            Hard
+          </option>
+
+        </select>
+
+        <select id="quizCount">
+
+          <option value="3">3 Questions</option>
+          <option value="5" selected>5 Questions</option>
+          <option value="10">10 Questions</option>
+
+        </select>
+
+      </div>
+
+      <button class="primary-btn" onclick="generateQuiz()">
+        Generate Quiz
+      </button>
+
+      <div id="quizResult" class="result"></div>
+
+    </section>
+
+
+    <!-- SUMMARIZE -->
+
+    <section id="summarySection" class="card feature-section">
+
+      <h2>📝 Summarize Text</h2>
+
+      <textarea id="summaryText" placeholder="Paste your study material here..."></textarea>
+
+      <button class="primary-btn" onclick="summarizeText()">
+        Summarize
+      </button>
+
+      <div id="summaryResult" class="result"></div>
+
+    </section>
+
+
+    <!-- LEARNING PATH -->
+
+    <section id="pathSection" class="card feature-section">
+
+      <h2>🚀 Personalized Learning Path</h2>
+
+      <input id="pathSubject" type="text" placeholder="Example: Python">
+
+      <select id="pathLevel">
+
+        <option value="beginner">
+          Beginner
+        </option>
+
+        <option value="intermediate">
+          Intermediate
+        </option>
+
+        <option value="advanced">
+          Advanced
+        </option>
+
+      </select>
+
+      <input id="pathGoal" type="text" placeholder="Example: Become a Python developer">
+
+      <button class="primary-btn" onclick="generateLearningPath()">
+        Create Learning Path
+      </button>
+
+      <div id="pathResult" class="result"></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      EduGenie © 2026 |
+      Powered by Google Gemini
+    </p>
+
+  </footer>
+
+
+  <!-- IMPORTANT: JS PATH -->
+
+  <script src="/static/script.js"></script>
+
+</body>
+
+</html>
